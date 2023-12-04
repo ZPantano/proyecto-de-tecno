@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plataforma de Seguridad</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #panicButton {
+      background-color: red;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+    #safetyTips {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #alertImage {
+      display: none;
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px;
+      transition: all 0.3s ease; /* Agregamos una transición suave para hacerlo más agradable visualmente */
+    }
+    .regresar-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+        }
+  </style>
+</head>
+<body>
+  <button id="panicButton" onclick="sendAlert()">Botón de Pánico</button>
+  <div id="safetyTips">
+    <h2>Consejos de Seguridad</h2>
+    <ul>
+      <li>Dirígete a un lugar seguro.</li>
+      <li>Contacta a las autoridades locales.</li>
+      <!-- ... Otros consejos de seguridad ... -->
+    </ul>
+  </div>
+
+  <img id="alertImage" src="C:\Users\omarm\Downloads\star.jpeg" alt="Alerta Enviada" style="width: 700px; height: auto;">
+
+  <script>
+    function sendAlert() {
+      // Aquí deberías implementar la lógica para enviar una alerta a los servicios de emergencia.
+      // Esto podría implicar el uso de una API externa, por ejemplo.
+      alert("¡Alerta enviada a los servicios de emergencia!");
+
+      // Muestra la imagen después de enviar la alerta
+      var alertImage = document.getElementById("alertImage");
+      alertImage.style.display = "block";
+      alertImage.style.width = "500px"; // Ajusta el ancho según tus necesidades
+      alertImage.style.height = "auto";
+    }
+
+    function regresarAPaginaPrincipal() {
+      // Redirige de vuelta a la página principal
+      window.location.href = "C:/xampp/htdocs/Proyecto_tecno/pagina de tecno.html";
+    }
+
+    // Esta función se ejecuta automáticamente cuando la página se carga
+    window.onload = function () {
+      // Llama a la función sendAlert al cargar la página
+      sendAlert();
+    };
+  </script>
+  <div id="consejos-container" class="consejos-container">
+    <!-- Enlace para regresar a la página principal -->
+    <p class="regresar-link"><a href="#" onclick="regresarAPaginaPrincipal()">Regresar a la Página Principal</a></p>
+  </div>
+</body>
+</html>

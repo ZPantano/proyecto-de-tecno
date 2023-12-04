@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .confidencialidad-box {
+            background-color: #ff0000; /* Color rojo */
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        .icono-advertencia {
+            display: inline-block;
+            font-size: 24px;
+            margin-right: 10px;
+        }
+    </style>
+
+
+
+    <title>Reporte de Incidente Delictivo</title>
+</head>
+<body>
+    <h1>Reporte de Incidente Delictivo</h1>
+    <form action="#" method="post">
+<!-- Recuadro de confidencialidad -->
+    <div class="confidencialidad-box">
+        <span class="icono-advertencia">⚠️</span>
+        Los datos ingresados son 100% confidenciales y nunca serán compartidos.
+    </div>
+
+
+<label for="nombre">Nombre del Informante:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+<label for="correo">Correo Electrónico del Informante:</label><br>
+        <input type="email" id="correo" name="correo" required><br><br>
+
+<label for="telefono">Teléfono del Informante:</label><br>
+        <input type="tel" id="telefono" name="telefono" required><br><br><br><br><br>
+
+    <form action="#" method="post">
+        <!-- Tu formulario aquí... -->
+    </form>
+
+	  <label for="descripcion">Descripción de la situacion:</label><br>
+        <textarea id="descripcion" name="descripcion" rows="4" cols="50" required></textarea><br><br>
+
+<label for="hora">Hora de los Hechos:</label><br>
+        <input type="time" id="hora" name="hora" required><br><br>
+
+        <label for="lugar">Lugar de los Hechos:</label><br>
+        <input type="text" id="lugar" name="lugar" required><br><br>
+
+        <label for="vestimenta">Vestimenta del Atacante:</label><br>
+        <input type="text" id="vestimenta" name="vestimenta" required><br><br>
+        
+        <label for="señas">Señas Particulares del Atacante:</label><br>
+        <textarea id="señas" name="señas" rows="4" cols="50" required></textarea><br><br>
+        
+        <label for="¿Hubo testigos?">Nombres de Testigos (si los hay):</label><br>
+        <input type="text" id="testigos" name="testigos"><br><br>
+        
+        <input type="submit" value="Enviar Reporte">
+    </form>
+
+    
+
+
+</body>
+</html>

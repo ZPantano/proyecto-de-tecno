@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Plataforma de Seguridad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .header {
+            background-color: #001f3f; /* Cambiamos el color a azul marino */
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .boton-panico {
+            background-color: red;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .iconos {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .icono {
+            text-align: center;
+            color: #333;
+        }
+        .tabla-informacion {
+            width: 100%;
+            border-collapse: collapse;
+            max-height: 400px;
+            overflow: auto;
+        }
+        .tabla-informacion th, .tabla-informacion td {
+            padding: 10px;
+            text-align: left;
+        }
+        .tabla-informacion th {
+            background-color: #333;
+            color: #fff;
+        }
+        .tabla-informacion tr:nth-child(odd) {
+            background-color: #07c4b7;
+        }
+
+        .columnas {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .columna {
+            width: 100%; /* Ocupa el 100% del espacio disponible */
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .columna img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%; /* La imagen no debe exceder el ancho del contenedor */
+            height: auto; /* Permite que la altura se ajuste automáticamente */
+        }
+
+        .columna h3 {
+            margin-top: 10px;
+        }
+
+        .columna p {
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function activarBotonPanico() {
+            // Redirige a la página de consejos de seguridad
+            window.location.href = "C:/xampp/htdocs/Proyecto_tecno/boton de panico.html";
+        }
+
+        // Esta función se ejecuta al cargar la página
+        window.onload = function () {
+            // Muestra la sección de consejos de seguridad si la URL contiene "consejos_seguridad.html"
+            if (window.location.href.includes('consejos_seguridad.html')) {
+                document.getElementById('consejos-container').style.display = 'block';
+            }
+            // Asigna la función activarBotonPanico al evento de clic del botón de pánico
+            document.querySelector('.boton-panico').addEventListener('click', activarBotonPanico);
+        };
+
+        //scrip de las opciones de los
+        function mostrarSeccion(seccionId) {
+            // Oculta todas las secciones
+            var secciones = document.querySelectorAll('.seccion-informacion');
+            secciones.forEach(function (seccion) {
+                seccion.style.display = 'none';
+            });
+
+            // Muestra la sección específica
+            document.getElementById(seccionId).style.display = 'block';
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Bienvenido a la Plataforma de Seguridad</h1>
+        <button class="boton-panico">Botón de Pánico</button>
+    </div>
+
+    <div class="container">
+        <div class="iconos">
+            <div class="icono">
+                <a href="chat.html"><img src="icono_chat.png" alt="Chat" width="50"></a>
+            </div>
+
+            <div class="icono">
+                <img src="icono_reporte.jpg" alt="Reporte de Incidentes" width="50">
+                <a href="reporte_incidente.html" class="boton-reportes">Reporte de Incidentes</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mueve la sección de Información Relevante fuera del div.container -->
+    <div class="container">
+        <div class="iconos">
+            <div class="icono">
+                <a href="javascript:void(0);" onclick="mostrarSeccion('informacionRelevante')">
+                    <img src="icono_info.png" alt="Información Relevante" width="50">
+                    <h3>Información Relevante</h3>
+                </a>
+                <p>Aquí puedes encontrar información relevante sobre seguridad. Esto incluye consejos y recursos útiles para mantenerse seguro en situaciones de riesgo.</p>
+            </div>
+
+            <div class="icono">
+                <a href="javascript:void(0);" onclick="mostrarSeccion('numerosContacto')">
+                    <img src="icono_telefono.jpg" alt="Números de Contacto" width="50">
+                    <h3>Números de Contacto</h3>
+                </a>
+                <p>Encuentra los números de contacto importantes, como el 911, para situaciones de emergencia. Tener acceso rápido a estos números es fundamental en caso de necesitar ayuda urgente.</p>
+            </div>
+
+            <div class="icono">
+                <a href="javascript:void(0);" onclick="mostrarSeccion('consejosSeguridad')">
+                    <img src="icono_consejos.jpg" alt="Consejos de Seguridad" width="50">
+                    <h3>Consejos de Seguridad</h3>
+                </a>
+                <p>Aprende consejos de seguridad para actuar de manera adecuada en situaciones de riesgo. Conocer cómo protegerte puede ser crucial en situaciones potencialmente peligrosas.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de Información Relevante -->
+    <div id="informacionRelevante" class="seccion-informacion">
+        <h2>Información Relevante</h2>
+        <div class="columnas">
+            <div class="columna">
+                <img src="imagen1.jpg" alt="Imagen 1" width="100">
+                <h3>Joaquín Archivaldo Guzmán Loera</h3>
+                <p>Joaquín Archivaldo Guzmán Loera, alias 'El Chapo', nació en México el 4 de abril de 1957. Es considerado como el narcotraficante más poderoso del mundo, según varios recuentos internacionales.
+
+                    Desde la década de 1980, Guzmán Loera se involucró en el tráfico de drogas, al asociarse con Miguel Ángel Félix Gallardo, conocido como "El Padrino", quien entonces era el principal productor de cocaína en México.
+                    
+                    Tras una serie de detenciones y divisiones internas durante los años posteriores, “El Chapo” decidió romper con la organización de Félix Gallardo y se trasladó a Culiacán, donde funda su Cártel.
+                    
+                    En 1993, Guzmán Loera fue detenido en el puente internacional del Talismán, en Guatemala, y extraditado a México, donde fue ingresado al penal de Almoloya.
+                    
+                    Dos años después, en 1995, fue trasladado al penal de máxima seguridad de Puente Grande, Jalisco, de donde logró escapar el 19 de enero de 2001.
+                </p>
+            </div>
+            <div class="columna">
+                <img src="imagen2.jpg" alt="Imagen 2" width="100">
+                <h3>Maluma baby</h3>
+                <p>Maluma es en realidad Juan Luis Londoño Arias, nacido en Medellín, Colombia, el 28 de enero de 1994. Su género musical es el reggeatón.
+                    Como ha sucedido con muchos artistas, Maluma cambió el deporte por la música. Cuando era niño integró las categorías inferiores de los clubes de fútbol Atlético Nacional y Equidad Club Deportivo, ambos de Colombia. A los 17 años decide iniciar su carrera como artista de reggaetón, editando el primer sencillo que se conoce de su carrera, titulado “Farandulera”.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de Números de Contacto -->
+    <div id="numerosContacto" class="seccion-informacion" style="display: none;">
+        <h2>Números de Contacto</h2>
+        <div class="columnas">
+            <div class="columna">
+                <img src="icono_telefono.jpg" alt="Números de Contacto" width="100">
+                <h3>Números de Contacto</h3>
+                <p> </p>
+                    Comisaria Policia de Gadalajara - 1201-6070 </p>
+                    <p>Proteccion civil y bomberos - 1201-7700 / 1524-6958</p>
+<p>cruz verde - 3614-5252</p>
+<p>Atencion ciudadana - 070</p>
+<p>Reportes a vialidad - Whatsapp: 33 3610 1010</p>
+
+                
+            
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de Consejos de Seguridad -->
+    <div id="consejosSeguridad" class="seccion-informacion" style="display: none;">
+        <h2>Consejos de Seguridad</h2>
+        <div class="columnas">
+            <div class="columna">
+                <img src="icono_consejos.jpg" alt="Consejos de Seguridad" width="100">
+                <h3>Consejos de Seguridad</h3>
+                <p>En caso de que te apuñalen, has presion sobre la herida con alguna prenda que tengas, si tienes el objeto encajado en tu cuerpo no lo saques</p>
+                <p>En caso de ser perseguido por algun delincuente, grita y golpea las puertas de las casas que hayan ahí para que ladren los perros de las casas y salga gente</p>
+                <p>Cuando camines por la calle mantente alerta siempre y no te distraigas con el celular</p>
+                <p>Es util configurar tu celular para mandar una alerta a la polica ya tus familiares presionando el boton de encendido varias veces</p>
+                <p>A veces todas las precauciones que se puedan tomar relativas a la seguridad en la calle no son suficientes para evitar una agresión. En este punto, lo único que nos queda es saber defendernos. Una opción es formarse en artes marciales, pero si prefieres conocer técnicas que sean eficaces, fáciles de ejecutar y que puedas aprender con mayor rapidez, la defensa personal es la clave. 
+
+                    En estas clases, no solo se trabajan los movimientos que nos ayudan a liberarnos, sino que se interpretan distintas situaciones en las que alguien, sobre todo las mujeres por su mayor vulnerabilidad, se puede ver implicado. </p>
+                <p>Aunque implique un recorrido un poco más largo, si quieres aumentar tu seguridad en la calle debes transitar áreas bien iluminadas y en las que haya gente. En el caso de que debas atravesar una zona que no conoces, utiliza el transporte público o un taxi en su defecto. </p>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

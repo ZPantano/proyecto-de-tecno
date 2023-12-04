@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0; /* Añadido para eliminar el margen predeterminado del cuerpo */
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto; /* Añadido margen al contenedor principal */
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.iconos {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    text-align: center; /* Centra el texto dentro de los iconos */
+}
+
+.icono {
+    flex: 1;
+    max-width: 30%; /* Ajusta el ancho máximo para evitar que se superpongan en pantallas pequeñas */
+    padding: 0 10px; /* Agregado relleno para separar los iconos */
+    box-sizing: border-box; /* Asegura que el relleno y el borde no aumenten el tamaño del icono */
+}
+
+.columna {
+    width: 100%; /* Ocupa todo el ancho disponible en lugar de un tercio */
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-sizing: border-box; /* Asegura que el relleno y el borde no aumenten el tamaño de la columna */
+}
+
+.columna img {
+    display: block;
+    margin: 0 auto;
+}
+
+.columna h3 {
+    margin-top: 10px;
+}
+
+.columna p {
+    margin-top: 10px;
+}
+
+.seccion-informacion {
+    text-align: center; /* Centra el texto dentro de las secciones de información */
+}
